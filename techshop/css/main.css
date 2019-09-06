@@ -1,0 +1,366 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+html,body{
+	/*background-color: #fff;*/
+	min-height: 100%;
+	/*position: relative;*/
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+a:focus{
+	text-decoration: none;
+}
+#wrap{
+	min-height: 100%;
+	/*padding-bottom: 335px;*/
+}
+.top_head{
+	width: 100%;
+	background-color: #272727;
+	height: 90px;
+}
+.top_head .logo{
+	/*display: flex;*/
+	margin: 22px 0 0 12px;
+	float: left;
+
+}
+.top_head .logo span {
+	font-family: Oswald;
+	font-weight: bold;
+	color: #fff;
+	font-size: 30px;
+}
+.search{
+	float: right;
+	margin-top: 28px;
+	width: 100%;
+
+}
+.search input, .footer input {
+	width: 100%;
+	background: #3c3c3c;
+	color: #4e4e4e;
+	border: 1px solid #000;
+	padding: 8px 10px;
+	font-size: 14px;
+	box-sizing: border-box;
+}
+.search input:focus, .footer input:focus  {
+	border: 1px solid #fff;
+	color: #eee;
+}
+.search p {
+	float: right;
+	font-family: "Oswald Light";
+	font-weight: light;
+	color: #a4a1a1;
+	font-size: 14px;
+	margin-top: 3px;
+}
+.down_head{
+	width: 100%;
+	/*height: 48px;*/
+	background-color: #1c1c1c;
+	color: #fff;
+	font-family: "Oswald Light";
+	font-size: 16px;
+	/*float: left;*/
+}
+.down_head ul{
+	list-style: none;
+	/*padding: 0 0 20px 0;*/
+}
+.down_head ul li{
+	float: left;
+	padding: 10px 10px 10px 3px;
+}
+.down_head ul li a {
+	/*color: #f7f7f7;*/
+}
+.down_head ul li a:hover {
+	color: #fff;
+	/*text-decoration: ;*/
+	/*padding-bottom: -3px;*/
+	/*border-bottom: 1px #fff solid;*/
+}
+.down_head ul li a.active{
+	/*border-bottom: 1px #fff solid;*/
+	text-decoration: underline;
+}
+.main{
+	margin-top: 20px;
+	padding-bottom: 335px;
+}
+.main .main_img{
+	/*margin-top: 15px;*/
+	background-image: url(../img/main/main_1_t.jpg);
+	text-align: center;
+	color: #fff;
+	font-family: "Oswald Light";
+	font-size: 15px;
+	cursor: pointer;
+	/*padding-top: 545px;*/
+	transition: all ease 1s;
+
+}
+.main .main_img .about{
+	position: absolute;
+	top: 450px;
+	right: 48%;
+	bottom: 77px;
+	right: 48%;
+	display: none;
+	transition: all ease 1s;
+}
+.main .main_img .arrows{
+	position: absolute;
+	top: 46%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	font-size: 32px;
+}
+.main .main_img .about:hover{
+	border-bottom: 1px solid #fff;
+}
+.main .main_img .about a{
+	color: #fff;
+	font-size: 25px;
+	text-decoration: none;
+}
+.main .main_img .about a:hover{
+	font-size: 1.7em;
+}
+.main .main_img_sm{
+	overflow: hidden;
+	margin-top: 30px;
+	padding-top: 550px;
+	transition: all ease 1s;
+	cursor: pointer;
+}
+.main #img_sm_1{
+	background-image: url(../img/main/main_4.jpg);
+}
+.main #img_sm_2{
+	background-image: url(../img/main/main_5.jpg);
+}
+.main .popular_items {
+	font-family: 'Oswald Light';
+	color: #2b2b2b;
+	text-align: center;
+}
+.main .popular_items h2{
+	font-size: 36px;
+	margin-top: 80px;
+	margin-bottom: 40px;
+}
+.main .popular_items p{
+	font-size: 20px;
+	font-family: "Oswald";
+	font-weight: 400;
+}
+.main .popular_items h4{
+	margin-top: 3px;
+	font-size: 15px;
+}
+.main .popular_items .ar_left, .ar_right {
+	font-size: 18px;
+	margin-top: 80px;
+}
+.main .about_us {
+	color: #2b2b2b;
+}
+.main .about_us h2{
+	text-align: center;
+	font-family: "Oswald Light";
+	font-size: 36px;
+	margin-top: 70px;
+	margin-bottom: 20px;
+}
+.main .about_us p{
+	font-family: "Roboto Light";
+	font-size: 18px;
+}
+.main .about_us .more a{
+	font-family: Oswald;
+	font-size: 22px;
+	float: right;
+	color: #333;
+	text-decoration: none;
+	margin-top: 5px;
+}
+.main .about_us .more a:hover{
+	text-decoration: none;
+}
+.footer{
+	/*margin-top: -335px;*/
+	background-color: #2b2b2b;
+	color: #f5f5f5;
+	padding-top: 50px;
+	padding-bottom: 100px;
+	/*height: 335px;*/
+}
+.footer .brand{
+	background-color: #f5f5f5;
+	color: #2b2b2b;
+	font-family: "Oswald SemiBold";
+	font-size: 36px;
+	text-align: center;
+}
+.footer .contact{
+	color: #808080;
+	line-height: 14px;
+	margin-top: 10px;
+	font-size: 13px;
+}
+.footer .about_us_f{
+
+}
+.footer h3, .footer h4{
+	text-align: left;
+	font-size: 25px;
+	font-family: "Oswald Light";
+	margin-bottom: 10px;
+}
+.footer h4{
+	font-size: 20px;
+	text-align: center;
+	font-family: "Oswald Light";
+	color: #C3C6D5;
+}
+.footer ul{
+	list-style: none;
+	font-family: "Roboto";
+	/*font-weight: lighter;*/
+	font-size: 16px;
+	line-height: 35px;
+}
+.footer .about_us_f ul li a, .footer .why_we ul li {
+	/*color: #dadada;*/
+	color: #C3C6D5;
+}
+.footer .media{
+		text-align: center;
+}
+.footer .media h4{
+margin-top: 10px;
+}
+.footer .media a{
+	color: #fff;
+	font-size: 25px;
+	margin-left: 7px;
+}
+
+/* Sidebar*/
+.side_bar{
+	background: ;
+	padding: 15px 5px;
+	color:#2b2b2b;
+	height: 100%;
+}
+.side_bar h3{
+	font-size: 21px;
+	font-family: "Oswald";
+}
+.side_bar ul{
+	margin-top: 5px;
+	list-style: none;
+	display: block;
+	width: 100%;
+}
+.side_bar ul li{
+	padding: 4px 12px;
+	margin: 4px 0;
+	width: 100%;
+	transition: all ease .25s;
+}
+.side_bar ul li:hover{
+	background-color: #eee;
+	text-align: center;
+}
+.side_bar ul li a{
+	font-size: 19px;
+	color: #2b2b2b;
+	font-family: "Oswald Light";
+}
+.side_bar ul li a:hover{
+	text-decoration: none;
+}
+.side_bar .active, .side_bar .active:hover  {
+	background-color: #2b2b2b;
+	color: #fff;
+	text-align: center;
+}
+.side_bar .active a {
+	color: #fff;
+}
+/* Sidebar END */
+
+/*------------- Warrants ------------*/
+
+.warrants {
+	padding: 5px 25px;
+}
+.warrants h1, .warrants h2{
+	font-family: "Oswald Light";
+}
+.warrants h2{
+	margin-bottom: 15px;
+	font-size: 25px;
+}
+.warrants p{
+	margin: 4px 0;
+}
+.warrants p, .warrants ul li{
+	font-family: "Roboto";
+	font-size: 20px;
+	list-style: inside;
+	margin: 12px 0;
+}
+
+
+/*  Enter styles    */
+
+.main .form{
+	padding: 5px 30px 10px 30px;
+	/*background-color: #ddd;*/
+}
+.main .form h1{
+	text-align: center;
+	font-family: "Oswald Light";
+	font-size: 35px;
+}
+.main .form input{
+	margin-bottom: 10px;
+	width: 100%;
+	background: #fff;
+	color: #272727;
+	/*border: 1px solid #000;*/
+	padding: 8px;
+	font-size: 17px;
+	box-sizing: border-box;
+}
+.main .form form a {
+	font-size: 18px;
+	font-family: "Roboto Condensed";
+	display: block;
+	margin-top: 10px;
+}
+.button{
+	cursor:pointer;
+	background-color: #2b2b2b;
+	padding: 7px 30px;
+	color:white;
+	font-family: 'Oswald';
+	border:1px solid #515050;
+	float: right;
+	display: block;
+	margin: 5px;
+	font-size: 18px;
+}

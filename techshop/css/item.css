@@ -1,0 +1,83 @@
+.breadcrumbs{
+	font-size: 17px;
+
+}
+.breadcrumbs a, .breadcrumbs span{
+	margin: 0 5px 0 5px;
+}
+.main .photo .product_slider img{
+	width: 100%;
+}
+.main .photo .m_product_slider{
+	padding: 1px 2px;
+}
+.main .photo .m_product_slider img{
+	width: 20%;
+
+}
+.button{
+	cursor:pointer;
+	background-color: #2b2b2b;
+	padding: 7px 30px;
+	color:white;
+	font-family: 'Oswald';
+	border:1px solid #515050;
+	float: left;
+	display: block;
+	margin: 5px;
+	font-size: 18px;
+	/*clear:both;*/
+}
+.main .info_panel{
+padding: 5px;
+display: block;
+}
+.main .info_panel .price span{
+	font-size: 30px;
+
+}
+.main .info_panel .about_purchase p{
+	font-size: 17px;
+	font-family: "Roboto Condensed";
+}
+.main .info_panel .about_purchase p span{
+	font-weight: bold;
+}
+.main .info_panel .about_purchase ul, .description ul{
+	list-style: none;
+}
+.description{
+	margin-top: 20px;
+}
+.description ul li p{
+	font-size: 16px;
+	font-family: Roboto;
+	
+}
+.description ul li{
+
+}
+.info_panel h3 {
+	font-family: "Oswald Light";
+	font-size: 21px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.description h4 {
+	font-size: 18px;
+	font-family: "Oswald Light";
+	margin-top: 8px;
+	margin-bottom: 3px;
+}
+.accordeon{
+	display: none;	
+	transition: top ease-out .3s;
+}
+/*#accord_header:after{
+	content: "+"; /*\02795*/
+
+}
+/*.info_panel.active{
+	display: block;
+}*/

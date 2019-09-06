@@ -1,0 +1,13 @@
+.contact{
+	padding-top: 10px;
+}
+.contact h2{
+	font-family: "Oswald Light";
+	font-size: 23px;
+	margin-bottom: 5px;
+}
+.contact p {
+	font-size: 19px;
+	font-family: "Roboto Condensed";
+}
+

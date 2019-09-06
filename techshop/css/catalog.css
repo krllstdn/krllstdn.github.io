@@ -1,0 +1,116 @@
+.side_bar{
+	background: ;
+	padding: 15px 5px;
+	color:#2b2b2b;
+	height: 100%;
+}
+.side_bar h3{
+	font-size: 21px;
+	font-family: "Oswald";
+}
+.side_bar ul{
+	margin-top: 5px;
+	list-style: none;
+	display: block;
+	width: 100%;
+}
+.side_bar ul li{
+	padding: 4px 12px;
+	margin: 4px 0;
+	width: 100%;
+	transition: all ease .25s;
+}
+.side_bar ul li:hover{
+	background-color: #eee;
+	text-align: center;
+}
+.side_bar ul li a{
+	font-size: 19px;
+	color: #2b2b2b;
+	font-family: "Roboto Condensed";
+}
+.side_bar ul li a:hover{
+	text-decoration: none;
+}
+.side_bar .active, .side_bar .active:hover  {
+	background-color: #2b2b2b;
+	color: #fff;
+	text-align: center;
+}
+.side_bar .active a {
+	color: #fff;
+}
+.row-flex{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+.items {
+	padding: 20px 0 0 0;
+	height: 100%;
+	text-align: left;
+}
+.item{
+	padding: 5px 5px 10px 5px;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.items img{
+	width: 98%;
+}
+.items h4{
+	font-family: "Oswald Light";
+	font-size: 18px;
+}
+.items p {
+	font-family: "Oswald Light";
+	font-size: 17px;
+	display: block;
+}
+.button{
+	cursor:pointer;
+	background-color: #2b2b2b;
+	padding: 5px 25px;
+	color:white;
+	font-family: 'Oswald';
+	border:1px solid #515050;
+	float: right;
+	display: block;
+	margin: 5px;
+	font-size: 15px;
+	clear:both;
+}
+.button:focus, .button:active{
+	outline:none;
+}
+
+.paginator{
+	color: #fff;
+	font-family: Roboto;
+	font-size: 16px;
+	margin-top: 30px;
+}
+.paginator ul{
+	list-style: none;
+}
+.paginator ul li {
+	/*background-color: #F5F5F5; */
+	border: 1px solid #2b2b2b;
+	float: left;
+	padding: 6px 13px;
+	margin-left: 9px;
+	color: #2b2b2b;
+}
+.paginator ul li:hover{
+	background-color: #2b2b2b;
+	color: #fff;
+}
+.paginator ul li a:hover{
+	color: #fff;
+}
+.paginator ul li.active {
+	background-color: #2b2b2b;
+	color: #fff;
+}
