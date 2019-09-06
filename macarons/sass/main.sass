@@ -1,0 +1,1040 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+html
+	padding: 0
+	margin: 0
+
+body
+	padding: 0
+	margin: 0
+	min-height: 100vh
+	font-size: 16px
+	min-width: 320px
+	max-width: 100vw
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	// height: 100%
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+	header
+		+media-breakpoint-down(sm) 
+			position: relative
+			top: 0
+			line-height: 30px
+			background-color: #FFF
+			width: 100vw
+			z-index: 100
+			// border-bottom: 1px solid #333
+			margin-right: 0
+		+media-breakpoint-down(xs)
+			// max-width: 411px 
+		.logo
+			float: left
+			owerflow: hidden
+			clear: both
+			+media-breakpoint-down(sm)
+				position: relative
+			img
+				margin: 10px 0
+				height: 50px
+				+media-breakpoint-down(sm)
+					height: 40px
+					margin: 15px 20px
+		nav
+			overflow: hidden
+			padding: 14px 0
+			ul
+				list-style: none
+				font-family: "Segoe Script Bold"
+				margin: 15px 0
+				+media-breakpoint-down(sm)
+					display: none
+					&.showing
+						display: block
+						padding: 20px 25px
+						position: absolute
+						background-color: #fff
+						top: 0
+						// right: 10px
+						left: -4em
+				&:after
+					content: ""
+					display: block
+					clear: both
+			li
+				float: left
+				margin-left: 12px
+				font-size: 14px
+				+media-breakpoint-down(sm)
+					float: none
+				a
+					color: $text
+					&:hover
+						color: #000
+				&.active
+					text-decoration: underline
+		a.menu-btn
+			margin-right: 15px
+			display: none
+			width: 60px
+			height: 60px
+			border-radius: 50%
+			position: relative
+			+media-breakpoint-down(sm)
+				display: block
+				// margin: 0
+			+media-breakpoint-down(xs)
+				margin: 0
+				margin-right: 20px
+			span
+				position: absolute
+				top: 50%
+				width: 25px
+				height: 2px
+				margin-top: -1px
+				background-color: #333
+				margin-left: 14px
+				&::before, &::after
+					content: ''
+					position: absolute
+					top: 50%
+					width: 25px
+					height: 2px
+					margin-top: -1px
+					background-color: #333
+					transition: all ease 0.5s
+				&::before
+					transform: translateY(-7px)
+				&::after
+					transform: translateY(7px)
+		a.menu-btn-active
+			transform: translateY(6px)
+			span
+				height: 0
+				&::before
+					transform: rotate(45deg)
+				&::after
+					transform: rotate(-45deg)
+	section.main_img
+		height: 680px			// 
+		background-image: url("../img/main_img3.jpg")
+		background-position: top center
+		background-repeat: no-repeat
+		background-color: #00E2D4
+		width: 100%
+		padding: 230px 0 
+		+media-breakpoint-down(sm)
+			z-index: 1
+			// margin-top: 70px
+			// height: 100vh
+		.main_text
+			@include fadeIn()
+			text-shadow: #ff2626 10px 5px 18px
+			text-align: center
+			margin: 0 auto
+			p
+				float: left
+				font-family: "Neucha" 
+				color: #fff
+				text-align: center
+				font-size: 44px
+ 				line-height: .8em
+				+media-breakpoint-down(sm)
+					font-size: 35px
+
+			span
+				display: block
+				font-family: "Neucha" 
+				color: #fff
+				line-height: .6em
+				font-size: 55px
+				+media-breakpoint-down(sm)
+					font-size: 45px
+		.button
+			@include fadeIn()
+			margin: 40px 61px
+			background-color: #ff2626
+			padding: 9px 18px
+			border: none
+			color: #fff
+			font-family: "Segoe Script Bold"
+			cursor: pointer
+			+media-breakpoint-down(sm)
+				padding: 10px 16px	
+				margin: 60px
+			&:hover
+				background-color: #fc0202
+			&:active
+			border: #fff
+			outline: none
+			a
+				color: #fff
+				font-family: "Segoe Script Bold"				
+
+	section.welcome
+		padding: 70px 0 50px 0
+		+media-breakpoint-down(sm)
+			padding-bottom: 20px
+			padding-top: 50px
+		h2
+			font-family: "Segoe print"
+			text-align: center
+			font-size: 26px
+			.bounceIn	
+				@include bounceInLeft()
+
+		p
+			font-size: 18px
+			line-height: 1.4em
+			margin-top: 25px
+			font-family: "Neucha"
+			+media-breakpoint-down(sm)
+				text-align: center
+				line-height: 1.2em
+		.more
+			float: right
+			font-family: "NEucha"
+			font-weight: bold
+			font-size: 17px
+			a
+				color: #000
+				&:hover 
+					color: #333
+
+	section.first_step
+		padding: 30px 0 50px 0
+		+media-breakpoint-down(sm)
+			padding: 0 0 30px
+		p.step
+			font-family: "Roboto Bold"
+			font-size: 22px
+			text-align: center
+			margin-top: 10px
+			+media-breakpoint-down(sm)
+				margin: 0
+				line-height: 1.2em
+				font-size: 20px
+				margin-top: 5px
+		.line
+			background-image: url("../img/circle.png")
+			background-repeat: repeat-x
+			width: 100%
+			height: 5px
+			margin-top: 18px
+		h2
+			text-align: center
+			font-family: "Segoe print"
+			font-size: 23px
+			margin-top: 8px
+			line-height: 1.35em
+			+media-breakpoint-down(sm)
+				font-size: 20px
+				margin: 0px 0 10px
+			+media-breakpoint-down(sm)
+				margin-top: 10px
+				margin-bottom: 7px
+		p
+			text-align: center
+			font-family: "Neucha"
+			font-size: 18px
+			line-height: 1.2em
+		p.desc	
+			+media-breakpoint-down(xs)
+				font-size: 16px
+				padding: 0 20px
+				margin-bottom: 0
+			+media-breakpoint-down(sm)
+				margin-bottom: 15px
+		.box
+			margin-top: 15px
+			img
+				width: 100%
+			h4
+				font-family: $segoe_p
+				font-size: 15px
+				text-align: center
+				margin-top: 15px
+				+media-breakpoint-down(sm)
+					margin-top: 8px
+
+	section.second_step
+		padding: 30px 0 50px 0
+		+media-breakpoint-down(sm)
+			padding: 0 0 30px
+		p.step
+			font-family: "Roboto Bold"
+			font-size: 22px
+			text-align: center
+			margin-top: 10px
+			+media-breakpoint-down(sm)
+				margin: 0
+				line-height: 1.2em
+				font-size: 20px
+				margin-top: 5px				
+		.line
+			background-image: url("../img/circle.png")
+			background-repeat: repeat-x
+			width: 100%
+			height: 5px
+			margin-top: 18px
+		h2
+			text-align: center
+			font-family: "Segoe Print"
+			font-size: 27px
+			margin-top: 8px
+			margin-bottom: 4px
+			+media-breakpoint-down(sm)
+				font-size: 20px
+				margin: 0px 0 10px
+			+media-breakpoint-down(sm)
+				margin-top: 10px
+				margin-bottom: 7px
+		p
+			text-align: center
+			font-family: "Neucha"
+			// font-weight: lighter
+			font-size: 18px
+			line-height: 1.15em
+		p.desc	
+			+media-breakpoint-down(xs)
+				font-size: 16px
+				padding: 0 20px
+				margin-bottom: 0
+			+media-breakpoint-down(sm)
+				margin-bottom: 0
+
+		.slider_wrap
+			border: none
+			padding: 30px 0 20px
+			+media-breakpoint-down(sm)
+				padding: 0
+			#left, #right
+				position: absolute
+				top: 44%
+				cursor: pointer
+
+
+				+media-breakpoint-down(sm)
+					display: none
+				img
+					height: 20px
+					display: block
+					+media-breakpoint-down(md)
+						height: 15px		
+
+				#right
+				transform: rotate(180deg)
+
+				img
+					margin-right: 10px
+				// +media-breakpoint-down(lg)
+				// +media-breakpoint-down(md)
+				// +media-breakpoint-down(sm)
+				// 	position: absolute
+				// 	top: -250px 
+				// 	left: 480px
+				// +media-breakpoint-down(xs)
+				// 	left: 430px
+				// 	top: -230px
+			#left
+				// +media-breakpoint-down(sm)
+				// 	position: absolute
+				// 	top: 30vh
+				// 	left: 24px
+				// 	z-index: 1000
+			.arrows
+				
+				display: none
+				width: 100%
+				+media-breakpoint-down(sm)
+					display: block
+					position: absolute
+					top: 45%
+					padding: 0 30px
+				+media-breakpoint-down(xs)
+					// top: 26vh
+				#right-r, #left-r
+					width: 25px
+					margin: 0
+					background-color: rgba(255, 255, 255, 0.3)
+					border-radius: 50px
+					padding: 0 5px
+
+				#right-r
+					// transform: rotate(180deg)
+					// padding-left: 6px
+					img
+						position: relative
+						top: -1px
+						left: 1px
+			.slider
+				+media-breakpoint-down(sm)
+					border-radius: 50%
+				.item
+					&:active, &:focus
+						outline: none
+					h2
+						font-size: 25px
+						line-height: 34px
+						text-align: center
+						// margin-top: 113px
+						font-family: "Neucha" //Segoe print
+						font-weight: bold
+						position: relative
+						top: 115px
+						&:after
+							content: ""
+							display: block
+							clear: both
+						+media-breakpoint-down(lg)
+							top: 90px	
+						+media-breakpoint-down(sm)
+							// position: absolute
+							top: 80px
+							margin: 0
+							color: #fff
+							font-size: 27px
+							text-shadow: #000 5px 5px 18px
+							z-index: 2
+						+media-breakpoint-down(md)
+							top: 60px
+							font-size: 23px
+						
+					img
+						width: 100%
+						border-radius: 50%
+						display: block
+						&:after
+							content: ""
+							display: block
+							clear: both
+						&.readable-text							
+							top: 0
+							left: 0
+							width: 100%
+							display: none
+							+media-breakpoint-down(sm)
+								display: block
+								position: absolute
+								opacity: .3
+								z-index: 2
+								border-radius: 50%
+						+media-breakpoint-down(sm)
+							position: relative
+							top: 0
+							bottom: 0
+							top: 20px
+							z-index: 1
+							margin-bottom: 20px	
+							
+							// border-radius: 50%
+
+					p
+						font-family: "Neucha"
+						min-height: 100px
+						font-size: 18px
+						padding-right: 30px
+						position: relative
+						top: 125px
+						left: -0px
+						width: 100%					
+						word-wrap: nowrap //break-word 
+						// word-break: keep-all
+						text-align: left
+						// white-space: nowrap
+						&:after
+							content: ""
+							display: block
+							clear: both
+						+media-breakpoint-down(lg)
+							top: 100px
+							bottom: 0	
+						
+						+media-breakpoint-down(md)
+							// position: relative
+							top: 48px
+							padding-right: 10px
+							line-height: 1em
+						+media-breakpoint-down(sm)
+							// position: absolute
+							top: -150px
+							// margin: 10px
+							z-index: 2
+							color: #fff
+							line-height: 1em
+							// background-color: rgba(255, 63, 63, .6)
+							// background-image: url("../img/circle-text.png")
+							padding: 17px 30px 27px
+							border-radius: 2%
+							font-size: 20px
+							// height: 100%
+							text-align: center
+							// border-bottom-left-radius: 80%
+							// border-bottom-right-radius: 80%
+
+							// margin: 0 22px 0 12px
+
+					.slider-header
+						height: 1px
+					.slider-text
+						height: 1px	
+			.slider-nav
+				&:active, &:focus, &:hover
+					outline: none
+				padding: 35px 0
+				+media-breakpoint-down(sm)
+					display: none
+				img
+					border-radius: 50%
+					// width: 20px
+					// height: 20px
+					margin-right: 6px
+					opacity: .75
+					&:focus, &:active
+						outline:none
+					+media-breakpoint-down(md)
+						width: 60px 
+					
+	section.third_step
+		padding: 30px 0 50px 0
+		+media-breakpoint-down(sm)
+			padding: 20px 0 50px
+		p.step
+			font-family: "Roboto Bold"
+			font-size: 22px
+			text-align: center
+			margin-top: 10px
+			+media-breakpoint-down(sm)
+				margin: 0
+				line-height: 1.2em
+				font-size: 20px
+		.line
+			background-image: url("../img/circle.png")
+			background-repeat: repeat-x
+			width: 100%
+			height: 5px
+			margin-top: 18px
+		h2
+			text-align: center
+			font-family: "Segoe print"
+			font-size: 27px
+			margin-top: 8px
+			+media-breakpoint-down(sm)
+				font-size: 20px
+				margin-top: 15px
+				margin-bottom: 5px
+		p
+			text-align: center
+			font-family: "Neucha"
+			font-size: 18px
+			line-height: 1.2em
+		p.desc	
+			+media-breakpoint-down(xs)
+				font-size: 16px
+				padding: 0 20px
+				margin-bottom: 0
+			+media-breakpoint-down(sm)
+				margin-bottom: 15px
+		.note
+			font-size: 14px
+			color: #858585
+			line-height: 1.3em
+			+media-breakpoint-down(xs)
+				font-size: 16px
+			span
+				color: $accent
+		.order-form
+			margin-top: 15px
+			.header
+				width: 100%
+				height: 60px
+				background-color: $accent
+			form
+				label
+					font-family: "Segoe Print"
+					margin: 7px 0 8px 5px
+				input
+					width: 100%
+					padding: 10px 15px 5px
+					border: none
+					border-bottom: 1px solid #eaeaea
+					// background-color: #ffeded
+					color: #3e3e3e
+				input#phonenumber
+					letter-spacing: 0.02em
+					// color: #afafaf
+				input#submit
+					background-color: $accent
+					width: 70%
+					margin: 35px 15% 20px 
+					font-family: "Segoe Print"
+					color: #fff
+					padding: 9px 0 
+
+	footer.footer
+		// position: absolute
+		// bottom: 0
+		// width: 100%
+		background-color: #333
+		color: #fff
+		padding: 20px 0 20px 0
+		+media-breakpoint-down(sm) 
+			text-align: center
+			// padding-left: 30px
+		h2
+			font-family: "Segoe Print"
+			margin-top: 10px
+			+media-breakpoint-down(md) 
+				// text-align: center
+				font-size: 20px
+				margin-top: 12px
+		nav
+			padding: 14px 0
+			+media-breakpoint-down(xs)
+				display: none
+			+media-breakpoint-down(sm)
+				display: none
+			&:after
+				content: ""
+				display: block
+				clear: both
+			ul
+				list-style: none
+				font-family: "Segoe Script"
+				margin: 5px 0
+				&:after
+					content: ""
+					display: block
+					clear: both
+			li
+				float: left
+				margin-left: 13px
+				font-size: 14px
+				a
+					color: #fff
+					&:hover
+						color: #eee
+
+		.social
+			padding: 0 10px
+			a
+				i
+					font-size: 25px
+					color: #fff
+					margin-right: 10px
+		p
+			font-size: 15px
+			font-family: "Roboto Condensed"
+			margin-top: 6px
+			margin-left: 3px
+			margin-bottom: 0
+			+media-breakpoint-down(sm) 
+				font-size: 17px
+
+		p.copy
+			font-size: 12px
+			font-family: "Neucha"
+			margin: 0
+	
+	section.tastes
+		h1
+			text-align: center
+			font-family: "Segoe Print"
+			font-size: 26px
+			margin-bottom: 15px
+			+media-breakpoint-down(md)
+				margin-bottom: 0
+		.tastes-wrap
+			
+			.img
+				+media-breakpoint-down(xs)
+					display: none	
+			.taste
+				margin-top: 20px
+				// opacity: .85
+				&:last-child
+					margin-bottom: 50px
+					+media-breakpoint-down(xs)
+					margin-bottom: 20px
+				+media-breakpoint-down(md)
+					margin-top: 15px
+				+media-breakpoint-down(xs)
+					margin-top: 15px
+					&:nth-child(1)
+						background: top center url("../img/Tastes/Tastes-exp/blackcurrant.jpg") no-repeat
+						background-size: cover
+					&:nth-child(2)
+						background: top center url("../img/Tastes/Tastes-exp/raspberry.jpg")
+						background-size: cover
+					&:nth-child(3)
+						background: top center url("../img/Tastes/Tastes-exp/strawberry-banana.jpg")
+						background-size: cover
+					&:nth-child(4)
+						background: top center url("../img/Tastes/Tastes-exp/chocolate.jpg")
+						background-size: cover
+					&:nth-child(5)
+						background: top center url("../img/Tastes/Tastes-exp/whitechocolate.jpg")
+						background-size: cover
+					&:nth-child(6)
+						background: top center url("../img/Tastes/Tastes-exp/lavanda.jpg")
+						background-size: cover
+					&:nth-child(7)
+						background: top center url("../img/Tastes/Tastes-exp/coconut.jpg")
+						background-size: cover
+					&:nth-child(8)
+						background: top center url("../img/Tastes/Tastes-exp/bluecheese.jpg")
+						background-size: cover
+					&:nth-child(9)
+						background: top center url("../img/Tastes/Tastes-exp/parmesan.jpg")
+						background-size: cover
+					&:nth-child(10)
+						background: top center url("../img/Tastes/Tastes-exp/lemon.jpg")
+						background-size: cover
+					&:nth-child(11)
+						background: top center url("../img/Tastes/Tastes-exp/fistashka.jpg")
+						background-size: cover
+					&:nth-child(12)
+						background: top center url("../img/Tastes/Tastes-exp/obl-rozm.jpg")
+						background-size: cover
+			img
+				width: 100%
+				+media-breakpoint-down(xs)
+					display: none
+			.taste-info
+				padding: 20px 45px
+				+media-breakpoint-down(md)
+					padding: 10px 35px
+				+media-breakpoint-down(sm)
+					padding: 5px
+				+media-breakpoint-down(xs)
+					padding: 40px 0px	
+					// background-image: url("../img/")
+					background-color: rgba(255, 255, 255, 0.2)
+					&:active, &:hover
+						background-color: rgba(255, 255, 255, .1)
+				h2
+					text-align: center
+					font-family: "Segoe Print"
+					font-size: 24px
+					margin-top: 40px
+					+media-breakpoint-down(md)
+						margin-top: 15px
+						margin-bottom: 0
+						font-size: 20px
+					+media-breakpoint-down(sm)
+						line-height: 1.2em	
+						font-size: 18px
+					+media-breakpoint-down(xs)
+						color: #1c1c1c
+				p
+					margin-top: 20px
+					font-size: 17px
+					padding: 10px 0px
+					font-family: "Neucha" 
+					line-height: 1.3em
+					+media-breakpoint-down(md)
+						margin-top: 10px
+						padding: 5px 10px
+						line-height: 1em
+					+media-breakpoint-down(xs)
+						margin-top: 5px
+						font-size: 16px
+						line-height: 1.15em
+						color: #1c1c1c
+						// text-shadow: 2px 2px 20px #fff
+						background-color: rgba(255, 255, 255, .6)
+						width: 100%
+						padding: 15px 50px
+	section.contacts
+		margin-top: 20px
+		min-height: 75vh
+		+media-breakpoint-down(xs)
+			margin-top: 10px
+		h1
+			font-family: "Segoe Print"
+			text-align: center
+		h3
+			font-family: "Segoe Script"
+			margin-top: 10px
+			+media-breakpoint-down(sm)
+				margin-left: 10px
+		p
+			margin-bottom: 0
+			&.number
+				margin-left: 20px
+				margin-bottom: 10px
+				font-family: "Roboto Condensed"
+				+media-breakpoint-down(sm)
+					margin-left: 25px
+			&.note
+				line-height: 1.2em
+				margin-top: 10px
+				font-family: "Neucha"
+				+media-breakpoint-down(sm)
+					margin-left: 10px
+		a				
+			display: block
+			font-family: NEucha
+			font-size: 17px
+			font-weight: 500
+			color: #000
+			line-height: 1.3em	
+			margin-left: 10px
+			+media-breakpoint-down(sm)
+				margin-left: 15px
+			&:hover
+				color: $accent
+				text-decoration: none
+		p.recall
+			font-family: "Neucha"
+			font-size: 17px
+			font-weight: bold
+			margin-top: 50px
+			cursor: pointer
+			&:hover
+				text-decoration: underline
+			+media-breakpoint-down(sm)
+				margin-top: 15px
+			+media-breakpoint-down(xs)
+				margin-top: 15px
+		.order-form
+			margin-top: 15px
+			+media-breakpoint-down(lg)
+				font-size: 15px
+			+media-breakpoint-down(sm)
+				margin-top: 30px
+				margin-bottom: 20px
+			.header
+				width: 100%
+				height: 60px
+				background-color: $accent
+			form
+				font-size: 15px
+				label
+					font-family: "Segoe Print"
+					margin: 7px 0 8px 5px
+					font-size: 15px
+				input
+					width: 100%
+					padding: 10px 15px 5px
+					border: none
+					border-bottom: 1px solid #eaeaea
+					// background-color: #ffeded
+					color: #3e3e3e
+					font-family: "ROboto Condensed"
+				input#phonenumber
+					letter-spacing: 0.02em
+					// color: #afafaf
+				input#submit
+					background-color: $accent
+					width: 70%
+					margin: 35px 15% 20px 
+					font-family: "Segoe Print"
+					color: #fff
+					padding: 9px 0 
+					font-size: 15px
+	section.packing	
+		padding-bottom: 30px
+		h1
+			text-align: center
+			font-family: "Segoe Print"
+			font-size: 25px
+			margin-top: 10px
+			margin-bottom: 25px	
+			line-height: 1.1em	
+		img
+			margin-bottom: 30px
+			max-width: 100%
+			+media-breakpoint-down(sm)
+			margin-bottom: 25px
+			+media-breakpoint-down(xs)
+				margin-bottom: 20px
+
+	section.about
+		min-height: 80vh
+		.about-intro
+				text-align: center
+		h1
+			text-align: center
+			font-family: "Segoe Print"
+			font-size: 25px
+			margin-top: 10px
+			margin-bottom: 25px	
+			line-height: 1.1em
+		h3
+			font-family: "Segoe Print"
+			margin-bottom: 5px
+			text-align: center	
+			+media-breakpoint-down(xs)
+				text-align: left
+				margin-left: 10px
+		p
+			line-height: 1.1em
+			font-family: "Neucha"
+			font-size: 17px
+			margin-bottom: 25px
+			margin-top: 1px
+			+media-breakpoint-down(md)
+				font-size: 16px
+		.img-wrap
+			// padding: 100px
+			img
+				width: 250px
+				// margin: 0 auto
+				// margin-left: 30%
+		.about-section-wrap
+			margin-top: 65px
+			+media-breakpoint-down(xs)
+				margin-top: 30px
+		.feedback
+			padding-bottom: 50px
+			+media-breakpoint-down(md)
+				padding-bottom: 50px
+			+media-breakpoint-down(sm)
+				padding: 0 7px 50px 7px
+			+media-breakpoint-down(xs)
+				padding-bottom: 40px
+			h2
+				text-align: center
+				font-family: "Segoe Print"
+				font-size: 22px
+				margin-top: 40px
+				margin-bottom: 0
+				+media-breakpoint-down(xs)
+					line-height: 1em
+			p
+				margin-top: 5px
+				padding: 0
+				text-align: center
+				line-height: 1.1em
+				font-size: 15px
+				font-family: "Arial"
+				margin-bottom: 10px
+				&.desc
+					font-family: "NEucha"
+					margin-bottom: 20px
+					+media-breakpoint-down(sm)
+						font-size: 14px
+				&.feedback-text
+					border: 1px solid #eee
+					padding: 15px 10px
+					font-size: 14px
+					border-radius: 5px
+					// &:before // Треугольнички
+					// 	content: ''
+					// 	position: absolute
+					// 	border: 8px solid transparent
+					// 	border-right: 7px solid #f9f9f9
+					// 	left: 0px
+					// 	top: 40%
+					// 	+media-breakpoint-down(md)
+					// 		left: 15px
+					// 	+media-breakpoint-down(sm)
+					// 		left: 10px
+					// 	+media-breakpoint-down(xs)
+					// 		left: 7px
+					+media-breakpoint-down(md)
+						margin: 0 0 0 15px
+					+media-breakpoint-down(sm)
+						line-height: 1.05em
+						padding: 10px 15px
+						margin: 0 10px
+					+media-breakpoint-down(xs)
+						font-size: 13px
+						line-height: 1.1em
+						padding: 6px 
+						margin: 0 5px 0 7px	
+				
+			.person
+				+media-breakpoint-down(xs)
+					padding: 0 20px
+				p
+					margin-top: 10px
+					font-size: 13px
+					font-family: "Segoe Print"
+					+media-breakpoint-down(md)
+						font-size: 12px
+					+media-breakpoint-down(sm)
+						font-size: 12px
+					+media-breakpoint-down(xs)
+						font-size: 11px
+						margin-top: 5px
+						line-height: 1em
+						text-align: center
+				.portrait
+					width: 100px
+					height: 100px
+					border-radius: 50px
+					background-color: #eee
+					margin: 0 auto
+					text-align: center
+					+media-breakpoint-down(md)
+						width: 70px
+						height: 70px
+						margin-top: 20px
+					+media-breakpoint-down(sm)
+						width: 70px
+						height: 70px
+						margin-top: 20px
+					+media-breakpoint-down(xs)
+						width: 60px
+						height: 60px
+					img
+						width: 100%	
+						border-radius: 50px
+	section.delivery
+		min-height: 80vh
+		+media-breakpoint-down(xl)
+			min-height: 90vh
+		h1
+			text-align: center
+			font-family: "Segoe Print"
+			font-size: 25px
+			margin-top: 10px
+			margin-bottom: 25px	
+			line-height: 1.1em	
+		h3
+			font-family: "Segoe Script"
+			margin-top: 10px
+			margin-left: 5px
+		p
+			font-family: "NEucha"
+			font-size: 17px
+			margin-bottom: 5px
+			line-height: 1.15em
+			+media-breakpoint-down(xs)
+				margin-bottom: 10px
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+
+
+@import "media" // Always at the end

@@ -1,0 +1,19 @@
+{
+  "name": "bonmacaron",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "bower.json",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "slick-carousel": "^1.8.1",
+    "slick": "*"
+  }
+}
