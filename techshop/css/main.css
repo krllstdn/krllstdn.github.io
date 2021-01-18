@@ -31,7 +31,7 @@ a:focus{
 
 }
 .top_head .logo span {
-	/*font-family: Oswald;*/
+	font-family: 'Oswald', sans-serif;
 	font-weight: bold;
 	color: #fff;
 	font-size: 30px;
