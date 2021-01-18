@@ -163,13 +163,14 @@ a:focus{
 }
 .main .popular_items p{ /*dsd*/
 	font-size: 20px;
-/* 	font-family: 'Oswald', sans-serif; */
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Oswald', sans-serif;
+/* 	font-family: 'Roboto', sans-serif; */
 /* 	font-weight: 400; */
 }
 .main .popular_items h4{
 	margin-top: 3px;
 	font-size: 15px;
+	font-family: 'Roboto', sans-serif;
 }
 .main .popular_items .ar_left, .ar_right {
 	font-size: 18px;
