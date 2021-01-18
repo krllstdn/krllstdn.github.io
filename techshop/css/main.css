@@ -161,10 +161,11 @@ a:focus{
 	margin-top: 80px;
 	margin-bottom: 40px;
 }
-.main .popular_items p{
+.main .popular_items p{ /*dsd*/
 	font-size: 20px;
-	font-family: 'Oswald', sans-serif;
-	font-weight: 400;
+/* 	font-family: 'Oswald', sans-serif; */
+	font-family: 'Roboto', sans-serif;
+/* 	font-weight: 400; */
 }
 .main .popular_items h4{
 	margin-top: 3px;
@@ -185,7 +186,7 @@ a:focus{
 	margin-bottom: 20px;
 }
 .main .about_us p{
-	font-family: "Roboto Light";
+	font-family: 'Roboto', sans-serif;
 	font-size: 18px;
 }
 .main .about_us .more a{
@@ -237,7 +238,7 @@ a:focus{
 }
 .footer ul{
 	list-style: none;
-	font-family: "Roboto";
+	font-family: 'Roboto', sans-serif;
 	/*font-weight: lighter;*/
 	font-size: 16px;
 	line-height: 35px;
@@ -319,7 +320,7 @@ margin-top: 10px;
 	margin: 4px 0;
 }
 .warrants p, .warrants ul li{
-	font-family: "Roboto";
+	font-family: 'Roboto', sans-serif;
 	font-size: 20px;
 	list-style: inside;
 	margin: 12px 0;
@@ -349,7 +350,8 @@ margin-top: 10px;
 }
 .main .form form a {
 	font-size: 18px;
-	font-family: "Roboto Condensed";
+	font-family: 'Roboto', sans-serif;
+	font-style: lighter;
 	display: block;
 	margin-top: 10px;
 }
@@ -357,7 +359,7 @@ margin-top: 10px;
 	cursor:pointer;
 	background-color: #2b2b2b;
 	padding: 7px 30px;
-	color:white;
+	color: white;
 	font-family: 'Oswald', sans-serif;
 	border:1px solid #515050;
 	float: right;
